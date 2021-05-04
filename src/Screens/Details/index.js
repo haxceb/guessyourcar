@@ -30,6 +30,7 @@ export default function Index() {
             return <GetInformationQuestion currentQuestion={allQuestions[questionNumber]} />;
         } else {
             return <Question currentQuestion={allQuestions[questionNumber]} />;
+
         }
     }
 

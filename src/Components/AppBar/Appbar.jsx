@@ -20,10 +20,10 @@ import Logo from "../../Media/GYC logo.png";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import DriveEtaIcon from '@material-ui/icons/DriveEta';
-import LocalCarWashIcon from '@material-ui/icons/LocalCarWash';
-import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
-import FlareIcon from '@material-ui/icons/Flare';
+import DriveEtaIcon from "@material-ui/icons/DriveEta";
+import LocalCarWashIcon from "@material-ui/icons/LocalCarWash";
+import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
+import FlareIcon from "@material-ui/icons/Flare";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -31,6 +31,14 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  avatar: {
+    width: "80px",
+    height: "fit-content",
+    [theme.breakpoints.down("sm")]: {
+      width: "60px",
+      height: "fit-content",
+    },
   },
   title: {
     display: "none",
@@ -50,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
       marginLeft: theme.spacing(3),
       width: "auto",
+      fontWeight: 900,
     },
     // [theme.breakpoints.up('sm')]: {
     //
@@ -188,13 +197,9 @@ export default function PrimarySearchAppBar() {
       <div className="w-100">
         <AppBar elevation={0} color="transparent" position="static">
           <Toolbar>
-            <Avatar
-              variant="square"
-              style={{ width: "80px", height: "fit-content" }}
-              src={Logo}
-            />
+            <Avatar variant="square" className={classes.avatar} src={Logo} />
             <div className={classes.search}>
-              <Typography variant="h4" style={{ fontWeight: 900 }}>
+              <Typography variant="h4" style={{ fontWeight: 800 }}>
                 <span className="text-primary">G</span>uess
                 <span className="text-success">Y</span>our
                 <span className="text-danger">C</span>ar
@@ -222,7 +227,6 @@ export default function PrimarySearchAppBar() {
               </MenuItem>
             </div>
             <div className={classes.sectionMobile}>
-              
               <IconButton
                 aria-label="show more"
                 aria-controls={mobileMenuId}

@@ -273,9 +273,7 @@ export default function index() {
                 Ad Here
             </Grid>
 
-            <Grid container className="mt-3" justify="center">
-                <FooterAll />
-            </Grid>
+
 
         </>
     )
