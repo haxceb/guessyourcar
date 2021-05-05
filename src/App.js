@@ -12,7 +12,7 @@ import FooterAll from './Components/Footer/FooterAll';
 import { Details } from '@material-ui/icons';
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
-import {Container} from './Components/DragandDrop/Container'
+import { Container } from './Components/DragandDrop/Container'
 
 function App() {
   return (
@@ -20,15 +20,11 @@ function App() {
       <Router>
         <div className="App">
           <PrimarySearchAppBar />
-
           <Divider />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/quiz" component={QuestionScreen} />
             <Route exact path="/detail" component={Details} />
-            <Route exact path="/dnd" component={Container} />
-
-
           </Switch>
           <Grid container className="mt-3" justify="center">
             <FooterAll />

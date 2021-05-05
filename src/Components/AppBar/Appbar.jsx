@@ -24,6 +24,7 @@ import DriveEtaIcon from "@material-ui/icons/DriveEta";
 import LocalCarWashIcon from "@material-ui/icons/LocalCarWash";
 import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 import FlareIcon from "@material-ui/icons/Flare";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -153,30 +154,38 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <LocalCarWashIcon />
-        </IconButton>
-        <p>Guess Car</p>
+        <Link to="/quiz">
+          <IconButton aria-label="show 4 new mails" color="inherit">
+            <LocalCarWashIcon />
+          </IconButton>
+          <p>Guess Car</p>
+        </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 4 new carts" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <DriveEtaIcon />
-          </Badge>
-        </IconButton>
-        <p>Upcoming Car</p>
+        <Link to="/quiz">
+          <IconButton aria-label="show 4 new carts" color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <DriveEtaIcon />
+            </Badge>
+          </IconButton>
+          <p>Upcoming Car</p>
+        </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <SpeakerNotesIcon />
-        </IconButton>
-        <p>Testimonials</p>
+        <Link to="/quiz">
+          <IconButton aria-label="show 11 new notifications" color="inherit">
+            <SpeakerNotesIcon />
+          </IconButton>
+          <p>Testimonials</p>
+        </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <NotificationsIcon />
-        </IconButton>
-        <p>Tips</p>
+        <Link to="/quiz">
+          <IconButton aria-label="show 11 new notifications" color="inherit">
+            <NotificationsIcon />
+          </IconButton>
+          <p>Tips</p>
+        </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -197,22 +206,37 @@ export default function PrimarySearchAppBar() {
       <div className="w-100">
         <AppBar elevation={0} color="transparent" position="static">
           <Toolbar>
-            <Avatar variant="square" className={classes.avatar} src={Logo} />
+            <Link to="/">
+              <Avatar variant="square" className={classes.avatar} src={Logo} />{" "}
+            </Link>
+
             <div className={classes.search}>
-              <Typography variant="h4" style={{ fontWeight: 800 }}>
-                <span className="text-primary">G</span>uess
-                <span className="text-success">Y</span>our
-                <span className="text-danger">C</span>ar
-              </Typography>
+              <Link to="/">
+                <Typography variant="h4" style={{ fontWeight: 800 }}>
+                  <span className="text-primary">G</span>uess
+                  <span className="text-success">Y</span>our
+                  <span className="text-danger">C</span>ar
+                </Typography>
+              </Link>
             </div>
             <div className={classes.grow} />
 
             <div className={classes.sectionDesktop}>
-              <MenuItem>Guess Car</MenuItem>
-              <MenuItem>Upcoming Car</MenuItem>
-              <MenuItem>Testimonials</MenuItem>
-              <MenuItem>Tips</MenuItem>
-              <MenuItem>Login</MenuItem>
+              <MenuItem>
+                <Link to="/quiz">Guess Car </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/">Upcoming Car</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/">Testimonials</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/">Tips</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/login">Login</Link>
+              </MenuItem>
               <MenuItem>English</MenuItem>
 
               <MenuItem>

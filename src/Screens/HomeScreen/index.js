@@ -1,7 +1,7 @@
 import { Avatar, Button, Card, Typography } from '@material-ui/core'
 import { Divider, Grid } from '@material-ui/core'
 import React from 'react'
-import BannerImage from '../../Media/Bannerpic.jpg'
+import BannerImage from '../../Media/pic1.jpg'
 import Image from '../../Media/Datsunredigo.png'
 import UpcomingCarCard from '../../Components/UpcomingCar/UpcomingCar'
 import NewsLetter from '../../Components/NewsLetter/NewsLetter'
@@ -11,10 +11,13 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import CarImage from "../../Media/2021-mercedes-benz-s-class.jpg";
 import Testimonials from '../../Components/UserExperience/userexperience'
+import { useHistory } from "react-router";
+import { Link } from 'react-router-dom';
 
+export default function Index() {
 
+    const history = useHistory();
 
-export default function index() {
     var settings = {
         dots: true,
         infinite: true,
@@ -106,6 +109,14 @@ export default function index() {
             }
         ]
     };
+
+
+
+    const handleGetStarted = () => {
+        history.push({
+            pathname: "/quiz"
+        })
+    }
     return (
         <>
             <Grid container >
@@ -113,8 +124,10 @@ export default function index() {
                     <img src={CarImage} className="h-75 w-100 img-fluid" />
                 </div>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }}>
-                    <div elevation={3}>
-                        <Avatar src={BannerImage} variant="rounded" style={{ height: "fit-content", width: "100%" }} component="div" />
+                    <div elevation={3} >
+                        <Link to="/quiz">
+                            <Avatar src={BannerImage} variant="rounded" style={{ height: "fit-content", width: "100%" }} component="div" />
+                        </Link>
                     </div>
                 </Grid>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }} alignItems="center" justify="center">
@@ -124,7 +137,7 @@ export default function index() {
                             <Typography variant="h4"> &amp;</Typography>
                             <Typography variant="h4">Guess Your Product</Typography>
                             <Typography variant="h6">(Basis your personality &amp; needs)</Typography>
-                            <Button size="large" style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '100%' }} variant="contained">Let's Start</Button>
+                            <Button size="large" onClick={handleGetStarted} style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '100%' }} variant="contained">Let's Start</Button>
                         </div>
                     </Card>
                 </Grid>
