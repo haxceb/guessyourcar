@@ -17,7 +17,7 @@ import { Container } from './Components/DragandDrop/Container'
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
-      <Router>
+      <Router basename="/guessyourcar">
         <div className="App">
           <PrimarySearchAppBar />
           <Divider />
