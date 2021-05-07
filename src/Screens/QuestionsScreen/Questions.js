@@ -1,19 +1,16 @@
 export const allQuestions = [
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "Assume you got a proposal of earning 10 times your current earning. For which you need to shift to a location 1000 kms away from your home for next 5 years, and you need to respond in next 15 mins. What will be your instant reaction?",
         value: 0,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "Accept the offer & Go.",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "Reject the offer",
                 value: 2
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "Take the risk of loosing the opportunity & request for one day’s time so that you can discuss with your family & decide.",
                 value: 3
             }
         ],
@@ -25,26 +22,30 @@ export const allQuestions = [
 
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "Which type of car you would like to own ?",
         value: 1,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "Sedan",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "Hatchback",
                 value: 2
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "SUV",
                 value: 3
             },
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 3
+                label: "MPV",
+                value: 4
+            },
+            {
+                label: "BMW",
+                value: 5
+            },
+            {
+                label: "Mercedes",
+                value: 6
             }
         ],
         multiSelect: true,
@@ -54,30 +55,25 @@ export const allQuestions = [
         questionNumber: "2"
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "How many seats you want in your car",
         value: 2,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "5",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "6",
                 value: 2
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "7",
                 value: 3
             },
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 3
+                label: "8",
+                value: 4
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 3
+                label: "9",
+                value: 5
             }
         ],
         multiSelect: true,
@@ -88,21 +84,27 @@ export const allQuestions = [
 
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "Which fuel type will you prefer ?",
         value: 3,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "Petrol",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "Diesel",
                 value: 2
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "CNG",
                 value: 3
+            }, {
+                label: "Electric",
+                value: 4
+            }, {
+                label: "Demo Field",
+                value: 5
+            }, {
+                label: "Demo Field",
+                value: 6
             }
         ],
         multiSelect: true,
@@ -112,15 +114,15 @@ export const allQuestions = [
         questionNumber: "4"
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "Which is your preferred transmission ?",
         value: 4,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
+                label: "Manual (with gear)",
                 isCorrect: false,
                 value: 1
             }, {
-                label: "consectetur adipiscing",
+                label: "Automatic (without gear)",
                 isCorrect: true,
                 value: 2
             }
@@ -132,16 +134,14 @@ export const allQuestions = [
         questionNumber: "5"
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "Would you like to buy car via ?",
         value: 5,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "Full Cash",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "Finance",
                 value: 2
             }
         ],
@@ -264,17 +264,24 @@ export const allQuestions = [
         downPayment: true
     },
     {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        label: "For how many बears would like to keep this car with you ?",
         value: 8,
         answerOptions: [
             {
-                label: "consectetur adipiscing",
-                isCorrect: false,
+                label: "1 years",
                 value: 1
             }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
+                label: "2-3 years",
                 value: 2
+            }, {
+                label: "4-5 years",
+                value: 3
+            }, {
+                label: "6-7 years",
+                value: 4
+            }, {
+                label: "More than 8 years",
+                value: 5
             }
         ],
         multiSelect: false,
@@ -285,7 +292,7 @@ export const allQuestions = [
     },
 
     {
-        downPaymentLabel: "Down Payment which can be paid /planning to pay cash INR",
+        downPaymentLabel: "What is your Average Running in Kilometres per day ?",
         downPaymentOptions: [
             {
                 title: "50",
@@ -331,24 +338,27 @@ export const allQuestions = [
         questionNumber: "9"
     },
     {
-        label: "Drag and Drop your priority from top to bottom ?",
+        label: "What are the reasons for which you actually want to buy the desired car ? ( Arrange it in the descending order of priority ) For eg :-mention 1 for Top most need and 2 for lesser important need and so on",
         value: 11,
         answerOptions: [
             {
-                text: "Mercedez Benz",
+                text: "High Status",
                 id: 1
             }, {
-                text: "Hyndai Tucson",
+                text: "More Engine Power",
                 id: 2
             }, {
-                text: "Jaguar XE",
+                text: "Luggage Space",
                 id: 3
             }, {
-                text: "Suzuki Dezire",
+                text: "Lower Running Cost",
                 id: 4
             }, {
-                text: "Nissan Kicks",
+                text: "Want to own Latest Car",
                 id: 5
+            }, {
+                text: "Style",
+                id: 6
             }
         ],
         questionNumber: "10",

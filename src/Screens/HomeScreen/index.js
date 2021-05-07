@@ -13,10 +13,37 @@ import CarImage from "../../Media/2021-mercedes-benz-s-class.jpg";
 import Testimonials from '../../Components/UserExperience/userexperience'
 import { useHistory } from "react-router";
 import { Link } from 'react-router-dom';
+import pic1 from '../../Media/pic1.jpg';
+import pic2 from '../../Media/pic2.jpg';
+import pic3 from '../../Media/pic3.jpg';
+import pic4 from '../../Media/pic4.jpg';
+
+
 
 export default function Index() {
 
     const history = useHistory();
+
+    var bannerSliderSetting = {
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        initialSlide: 0,
+        responsive: [{
+            breakpoint: 500,
+            bannerSliderSetting: {
+                infinite: true,
+                speed: 2000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                initialSlide: 0,
+            }
+        }
+        ]
+    }
 
     var settings = {
         dots: true,
@@ -124,11 +151,30 @@ export default function Index() {
                     <img src={CarImage} className="h-75 w-100 img-fluid" />
                 </div>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }}>
-                    <div elevation={3} >
-                        <Link to="/quiz">
-                            <Avatar src={BannerImage} variant="rounded" style={{ height: "fit-content", width: "100%" }} component="div" />
-                        </Link>
-                    </div>
+                    <Slider {...bannerSliderSetting}>
+
+                        <div elevation={3} style={{ height: '100%' }}>
+                            <Link to="/quiz">
+                                <Avatar src={pic1} variant="rounded" style={{ minHeight: 350, objectFit: 'contain !important', width: '100%' }} component="div" />
+                            </Link>
+                        </div>
+                        <div elevation={3} style={{ height: '100%' }}>
+                            <Link to="/quiz">
+                                <Avatar src={pic2} variant="rounded" style={{ minHeight: 350, objectFit: 'contain !important', width: '100%' }} component="div" />
+                            </Link>
+                        </div>
+                        <div elevation={3} style={{ height: '100%' }}>
+                            <Link to="/quiz">
+                                <Avatar src={pic3} variant="rounded" style={{ minHeight: 350, objectFit: 'contain !important', width: '100%' }} component="div" />
+                            </Link>
+                        </div>
+                        <div elevation={3} style={{ height: '100%' }}>
+                            <Link to="/quiz">
+                                <Avatar src={pic4} variant="rounded" style={{ minHeight: 350, objectFit: 'contain !important', width: '100%' }} component="div" />
+                            </Link>
+                        </div>
+                    </Slider>
+
                 </Grid>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }} alignItems="center" justify="center">
                     <Card elevation={3} style={{ height: "100%", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

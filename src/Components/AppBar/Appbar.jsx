@@ -168,7 +168,7 @@ export default function PrimarySearchAppBar() {
               <DriveEtaIcon />
             </Badge>
           </IconButton>
-          <p>Upcoming Car</p>
+          <p>Upcoming Cars</p>
         </Link>
       </MenuItem>
       <MenuItem>
@@ -226,13 +226,13 @@ export default function PrimarySearchAppBar() {
                 <Link to="/quiz">Guess Car </Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/">Upcoming Car</Link>
+                <Link to="/upcoming-cars">Upcoming Cars</Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/">Testimonials</Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/">Tips</Link>
+                <Link to="/tips">Tips</Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/login">Login</Link>
