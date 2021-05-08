@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -8,10 +8,20 @@ import { Checkbox, Typography } from "@material-ui/core";
 import { Container } from "../DragandDrop/Container";
 
 export default function Index({ currentQuestion }) {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = useState(2);
+  const [checkBox, setCheckBox] = useState([]);
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setValue(Number(event.target.value));
+  };
+
+  const handleCheckboxChange = (event) => {
+    console.log(event.target.name, event.target.checked);
+    console.log({ checkBox });
+    setCheckBox({
+      ...checkBox,
+      [event.target.name]: event.target.checked,
+    });
   };
 
   const {
@@ -52,9 +62,9 @@ export default function Index({ currentQuestion }) {
               value={item?.value}
               control={
                 <Checkbox
-                  checked={true}
-                  onChange={handleChange}
-                  name="checkedB"
+                  checked={checkBox?.name}
+                  onChange={handleCheckboxChange}
+                  name={item?.label}
                   color="primary"
                 />
               }
