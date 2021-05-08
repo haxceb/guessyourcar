@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/guessyourcar/static/css/main.232dd6cc.chunk.css",
-    "main.js": "/guessyourcar/static/js/main.75035a31.chunk.js",
-    "main.js.map": "/guessyourcar/static/js/main.75035a31.chunk.js.map",
+    "main.js": "/guessyourcar/static/js/main.ea086b48.chunk.js",
+    "main.js.map": "/guessyourcar/static/js/main.ea086b48.chunk.js.map",
     "runtime-main.js": "/guessyourcar/static/js/runtime-main.7c15cb61.js",
     "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.7c15cb61.js.map",
     "static/css/2.63b73c68.chunk.css": "/guessyourcar/static/css/2.63b73c68.chunk.css",
-    "static/js/2.fd12e382.chunk.js": "/guessyourcar/static/js/2.fd12e382.chunk.js",
-    "static/js/2.fd12e382.chunk.js.map": "/guessyourcar/static/js/2.fd12e382.chunk.js.map",
+    "static/js/2.8ac55c73.chunk.js": "/guessyourcar/static/js/2.8ac55c73.chunk.js",
+    "static/js/2.8ac55c73.chunk.js.map": "/guessyourcar/static/js/2.8ac55c73.chunk.js.map",
     "static/js/3.7382c2cd.chunk.js": "/guessyourcar/static/js/3.7382c2cd.chunk.js",
     "static/js/3.7382c2cd.chunk.js.map": "/guessyourcar/static/js/3.7382c2cd.chunk.js.map",
     "index.html": "/guessyourcar/index.html",
     "static/css/2.63b73c68.chunk.css.map": "/guessyourcar/static/css/2.63b73c68.chunk.css.map",
     "static/css/main.232dd6cc.chunk.css.map": "/guessyourcar/static/css/main.232dd6cc.chunk.css.map",
-    "static/js/2.fd12e382.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.fd12e382.chunk.js.LICENSE.txt",
+    "static/js/2.8ac55c73.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.8ac55c73.chunk.js.LICENSE.txt",
     "static/media/2021-mercedes-benz-s-class.7150b5ed.jpg": "/guessyourcar/static/media/2021-mercedes-benz-s-class.7150b5ed.jpg",
     "static/media/Datsunredigo.65829960.png": "/guessyourcar/static/media/Datsunredigo.65829960.png",
     "static/media/HONDA CITY.057b4913.png": "/guessyourcar/static/media/HONDA CITY.057b4913.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.7c15cb61.js",
     "static/css/2.63b73c68.chunk.css",
-    "static/js/2.fd12e382.chunk.js",
+    "static/js/2.8ac55c73.chunk.js",
     "static/css/main.232dd6cc.chunk.css",
-    "static/js/main.75035a31.chunk.js"
+    "static/js/main.ea086b48.chunk.js"
   ]
 }
