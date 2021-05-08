@@ -1,31 +1,34 @@
 {
   "files": {
     "main.css": "/guessyourcar/static/css/main.232dd6cc.chunk.css",
-    "main.js": "/guessyourcar/static/js/main.449f8ff4.chunk.js",
-    "main.js.map": "/guessyourcar/static/js/main.449f8ff4.chunk.js.map",
-    "runtime-main.js": "/guessyourcar/static/js/runtime-main.b58c64e8.js",
-    "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.b58c64e8.js.map",
+    "main.js": "/guessyourcar/static/js/main.75035a31.chunk.js",
+    "main.js.map": "/guessyourcar/static/js/main.75035a31.chunk.js.map",
+    "runtime-main.js": "/guessyourcar/static/js/runtime-main.7c15cb61.js",
+    "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.7c15cb61.js.map",
     "static/css/2.63b73c68.chunk.css": "/guessyourcar/static/css/2.63b73c68.chunk.css",
-    "static/js/2.ca8b51ce.chunk.js": "/guessyourcar/static/js/2.ca8b51ce.chunk.js",
-    "static/js/2.ca8b51ce.chunk.js.map": "/guessyourcar/static/js/2.ca8b51ce.chunk.js.map",
-    "static/js/3.1a343f29.chunk.js": "/guessyourcar/static/js/3.1a343f29.chunk.js",
-    "static/js/3.1a343f29.chunk.js.map": "/guessyourcar/static/js/3.1a343f29.chunk.js.map",
+    "static/js/2.fd12e382.chunk.js": "/guessyourcar/static/js/2.fd12e382.chunk.js",
+    "static/js/2.fd12e382.chunk.js.map": "/guessyourcar/static/js/2.fd12e382.chunk.js.map",
+    "static/js/3.7382c2cd.chunk.js": "/guessyourcar/static/js/3.7382c2cd.chunk.js",
+    "static/js/3.7382c2cd.chunk.js.map": "/guessyourcar/static/js/3.7382c2cd.chunk.js.map",
     "index.html": "/guessyourcar/index.html",
     "static/css/2.63b73c68.chunk.css.map": "/guessyourcar/static/css/2.63b73c68.chunk.css.map",
     "static/css/main.232dd6cc.chunk.css.map": "/guessyourcar/static/css/main.232dd6cc.chunk.css.map",
-    "static/js/2.ca8b51ce.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.ca8b51ce.chunk.js.LICENSE.txt",
+    "static/js/2.fd12e382.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.fd12e382.chunk.js.LICENSE.txt",
     "static/media/2021-mercedes-benz-s-class.7150b5ed.jpg": "/guessyourcar/static/media/2021-mercedes-benz-s-class.7150b5ed.jpg",
     "static/media/Datsunredigo.65829960.png": "/guessyourcar/static/media/Datsunredigo.65829960.png",
     "static/media/HONDA CITY.057b4913.png": "/guessyourcar/static/media/HONDA CITY.057b4913.png",
     "static/media/pic1.b498ea61.jpg": "/guessyourcar/static/media/pic1.b498ea61.jpg",
+    "static/media/pic2.6111e944.jpg": "/guessyourcar/static/media/pic2.6111e944.jpg",
+    "static/media/pic3.fbbe55d1.jpg": "/guessyourcar/static/media/pic3.fbbe55d1.jpg",
+    "static/media/pic4.f12abe55.jpg": "/guessyourcar/static/media/pic4.f12abe55.jpg",
     "static/media/slick-theme.css": "/guessyourcar/static/media/slick.c94f7671.ttf",
     "static/media/theo.b5b40e4f.jpg": "/guessyourcar/static/media/theo.b5b40e4f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b58c64e8.js",
+    "static/js/runtime-main.7c15cb61.js",
     "static/css/2.63b73c68.chunk.css",
-    "static/js/2.ca8b51ce.chunk.js",
+    "static/js/2.fd12e382.chunk.js",
     "static/css/main.232dd6cc.chunk.css",
-    "static/js/main.449f8ff4.chunk.js"
+    "static/js/main.75035a31.chunk.js"
   ]
 }
