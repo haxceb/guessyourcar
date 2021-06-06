@@ -7,34 +7,106 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { allQuestions } from './Questions';
 import MinMaxQuestion from '../../Components/Question/MinMax';
 import GetInformationQuestion from '../../Components/Question/GetInformation';
+import axios from 'axios'
 
 
 export default function Index() {
-    const [questionNumber, setQuestionNumber] = useState(0);
+    const [questionNumber, setQuestionNumber] = useState(1);
+
+    const [allQuizQuestions, setAllQuizQuestions] = useState(allQuestions);
+
+    const [allAnswers, setAllAnswers] = useState({});
+    const [checkBox, setCheckBox] = useState({
+        1: {},
+        2: {},
+        3: {},
+        4: {},
+        5: {},
+        6: {},
+        7: {},
+        8: {},
+        9: {},
+        10: {},
+        11: {},
+        12: {},
+        13: {},
+        14: {},
+        15: {},
+        16: {},
+    });
+
 
     const handleNextClick = () => {
-        if ((questionNumber + 1) !== allQuestions.length) {
+        if ((questionNumber + 1) <= allQuestions?.length) {
             setQuestionNumber(questionNumber + 1);
         }
     }
     const handlePreviousClick = () => {
-        if (questionNumber !== 0) {
+        if ((questionNumber - 1) !== 0) {
             setQuestionNumber(questionNumber - 1);
         }
     }
 
     const handleQuestions = () => {
-        if (allQuestions[questionNumber]?.minMax || allQuestions[questionNumber]?.loanPayment || allQuestions[questionNumber]?.downPayment) {
-            return <MinMaxQuestion currentQuestion={allQuestions[questionNumber]} />;
-        } else if (allQuestions[questionNumber]?.getInformation) {
-            return <GetInformationQuestion currentQuestion={allQuestions[questionNumber]} />;
+        if (allQuestions[questionNumber - 1]?.minMax || allQuestions[questionNumber - 1]?.loanPayment || allQuestions[questionNumber - 1]?.downPayment) {
+            return <MinMaxQuestion currentQuestion={allQuestions[questionNumber - 1]} checkBox={checkBox} questionNumber={questionNumber} setCheckBox={setCheckBox} />;
+        } else if (allQuestions[questionNumber - 1]?.getInformation) {
+            return <GetInformationQuestion currentQuestion={allQuestions[questionNumber - 1]} checkBox={checkBox} questionNumber={questionNumber} setCheckBox={setCheckBox} />;
         } else {
-            return <Question currentQuestion={allQuestions[questionNumber]} />;
+            return <Question currentQuestion={allQuestions[questionNumber - 1]} questionNumber={questionNumber} checkBox={checkBox} setCheckBox={setCheckBox} />;
         }
     }
 
+    console.log(Object.keys(checkBox[2]))
+
+    let req = {
+        emotion: checkBox[1]?.label ?? 'RATIONAL',
+        carType: Object.keys(checkBox[2]) ?? ["SUV"],
+        fundingOption: checkBox[6]?.label ?? 'CASH',
+        minCashBudget: Number(checkBox[7]?.minCashBudget) ?? 200000,
+        maxCashBudget: Number(checkBox[7]?.maxCashBudget) ?? 100000000,
+        loanTenure: Number(checkBox[8]?.minLoanValue) ?? 4,
+        minEMI: Number(checkBox[8]?.minCashBudget) ?? 20000,
+        maxEMI: Number(checkBox[8]?.maxCashBudget) ?? 200000,
+        downPayment: Number(checkBox[8]?.minDownPayment) ?? 200000,
+        transmissionType: Object.keys(checkBox[5] ?? ['AUTOMATIC']),
+        reasonStatus: 0,
+        reasonEnginePower: 0,
+        reasonLuggageSpace: 0,
+        reasonRunningCost: 0,
+        reasonLatestCar: 0,
+        reasonComfort: 0,
+        reasonStyle: 0,
+        fuelType: Object.keys(checkBox[4] ?? ['PETROL']),
+        seatingCapacity: Object.keys(checkBox[3] ?? ['5']),
+        brand: Object.keys(checkBox[2]) ?? [
+            "MARUTI"
+        ],
+        fullName: `${checkBox[14]?.firstName} ${checkBox[14]?.lastName}`,
+        emailAddress: "abcsas@xyz.com",
+        mobileNumber: checkBox[14]?.mobileNumber,
+        city: checkBox[14]?.city,
+        duration: Number(checkBox[9]?.value) ?? 4,
+        running: Number(checkBox[10]?.minDownPayment) ?? 100,
+        advanceFeatures: {
+            noPreference: true,
+            sunroof: false,
+            turboEngine: false,
+            cruiseControl: false,
+            rearACVents: false,
+            moreThanTwoAirBags: false,
+            driveType: "ANY",
+            engineCapacity: "ONE"
+        }
+    }
+
+
     const handleSubmit = () => {
-        return alert("Your form has submitted");
+        const response = axios.post('http://184.168.126.65:8080/gyc/questionnaire/result', req);
+        console.log({ response });
+        if (response) {
+            alert({ response });
+        }
     }
     return (
         <Grid container >
@@ -48,14 +120,14 @@ export default function Index() {
                     </Alert>
                 </Grid>
                 <Grid item container xs={12} className="mb-3 mt-4">
-                    <Typography variant="h5" style={{ fontWeight: 700 }}>Question # {allQuestions[questionNumber]?.questionNumber}/<span style={{ fontSize: '16px' }}>12</span></Typography>
+                    <Typography variant="h5" style={{ fontWeight: 700 }}>Question # {questionNumber}/<span style={{ fontSize: '16px' }}>{allQuestions?.length}</span></Typography>
                 </Grid>
                 <Grid item container xs={12}>
                     {handleQuestions()}
                 </Grid>
                 <Grid item container xs={12} className="mb-3 mt-4" justify="center">
                     <Button variant="contained" className="mr-5" color="primary" onClick={handlePreviousClick} startIcon={<ArrowLeftIcon />}>Previous</Button>
-                    {allQuestions[questionNumber]?.lastQuestion ?
+                    {allQuestions[questionNumber - 1]?.lastQuestion ?
                         <Button variant="contained" color="primary" className="" onClick={handleSubmit}>Submit</Button> :
                         <Button variant="contained" color="primary" className="" onClick={handleNextClick} endIcon={<ArrowRightIcon />}>Next</Button>}
                 </Grid>

@@ -7,22 +7,13 @@ import FormLabel from "@material-ui/core/FormLabel";
 import { Checkbox, Typography } from "@material-ui/core";
 import { Container } from "../DragandDrop/Container";
 
-export default function Index({ currentQuestion }) {
-  const [value, setValue] = useState(2);
-  const [checkBox, setCheckBox] = useState([]);
-
-  const handleChange = (event) => {
-    setValue(Number(event.target.value));
-  };
-
-  const handleCheckboxChange = (event) => {
-    console.log(event.target.name, event.target.checked);
-    console.log({ checkBox });
-    setCheckBox({
-      ...checkBox,
-      [event.target.name]: event.target.checked,
-    });
-  };
+export default function Index({
+  currentQuestion,
+  questionNumber,
+  checkBox,
+  setCheckBox,
+}) {
+  const [value, setValue] = useState("");
 
   const {
     answerOptions,
@@ -31,10 +22,38 @@ export default function Index({ currentQuestion }) {
     dragAndDrop,
   } = currentQuestion;
 
+  const handleChange = (event, index, item) => {
+    let newObject = checkBox[questionNumber];
+    newObject = {
+      label: item?.label,
+      [item?.label]: event.target.checked,
+      value: event.target.value,
+    };
+    console.log({ checkBox });
+    setCheckBox({
+      ...checkBox,
+      [questionNumber]: newObject,
+    });
+  };
+
+  const handleCheckboxChange = (event, index) => {
+    answerOptions[index].isChecked = !answerOptions[index].isChecked;
+    let newObject = checkBox[questionNumber];
+    newObject = {
+      ...newObject,
+      [event.target.name]: event.target.checked,
+    };
+    console.log({ checkBox });
+    setCheckBox({
+      ...checkBox,
+      [questionNumber]: newObject,
+    });
+  };
+
   return (
     <FormControl component="fieldset">
       <FormLabel style={{ color: "black" }}>
-        <Typography variant="h6" align="justify">
+        <Typography variant="h6" className="in-down" align="justify">
           {currentQuestion?.label}
         </Typography>
       </FormLabel>
@@ -44,8 +63,9 @@ export default function Index({ currentQuestion }) {
             <RadioGroup
               aria-label="answerOptions"
               name="answerOptions"
-              value={value}
-              onChange={handleChange}
+              value={Number(checkBox[questionNumber]?.value)}
+              onChange={(e) => handleChange(e, index, item)}
+              className="in-left"
             >
               <FormControlLabel
                 value={item?.value}
@@ -56,15 +76,17 @@ export default function Index({ currentQuestion }) {
           );
         })}
       {multiSelect &&
-        answerOptions?.map((item) => {
+        answerOptions?.map((item, index) => {
           return (
             <FormControlLabel
-              value={item?.value}
+              value={value}
+              className="in-down"
               control={
                 <Checkbox
-                  checked={checkBox?.name}
-                  onChange={handleCheckboxChange}
+                  checked={item?.isChecked}
+                  onChange={(e) => handleCheckboxChange(e, index)}
                   name={item?.label}
+                  className="in-left"
                   color="primary"
                 />
               }
@@ -73,7 +95,14 @@ export default function Index({ currentQuestion }) {
           );
         })}
 
-      {dragAndDrop && <Container answerOptions={answerOptions} />}
+      {dragAndDrop && (
+        <Container
+          answerOptions={answerOptions}
+          checkBox={checkBox}
+          setCheckBox={setCheckBox}
+          questionNumber={questionNumber}
+        />
+      )}
     </FormControl>
   );
 }

@@ -1,12 +1,18 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Card } from "./Card";
 import update from "immutability-helper";
 const style = {
   width: 280,
 };
-export const Container = ({ answerOptions }) => {
+export const Container = ({
+  answerOptions,
+  checkBox,
+  setCheckBox,
+  questionNumber,
+}) => {
   {
     const [cards, setCards] = useState(answerOptions ?? []);
+
     const moveCard = useCallback(
       (dragIndex, hoverIndex) => {
         const dragCard = cards[dragIndex];
@@ -21,6 +27,16 @@ export const Container = ({ answerOptions }) => {
       },
       [cards]
     );
+
+    useEffect(() => {
+      if (cards) {
+        setCheckBox({
+          ...checkBox,
+          [questionNumber]: cards,
+        });
+        console.log({ checkBox });
+      }
+    }, [cards]);
     const renderCard = (card, index) => {
       return (
         <Card
@@ -29,6 +45,7 @@ export const Container = ({ answerOptions }) => {
           id={card.id}
           text={card.text}
           moveCard={moveCard}
+          className="in-left"
         />
       );
     };

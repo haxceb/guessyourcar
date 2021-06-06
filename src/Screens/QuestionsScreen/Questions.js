@@ -18,8 +18,11 @@ export const allQuestions = [
         isFill: false,
         isDropDown: false,
         singleSelect: true,
-        questionNumber: "1"
-
+        questionNumber: "1",
+        minMax: false,
+        loanPayment: false,
+        downPayment: false,
+        getInformation: false
     },
     {
         label: "Which type of car you would like to own ?",
@@ -27,25 +30,31 @@ export const allQuestions = [
         answerOptions: [
             {
                 label: "Sedan",
-                value: 1
+                value: 1,
+                isChecked: false
             }, {
                 label: "Hatchback",
-                value: 2
+                value: 2,
+                isChecked: false
             }, {
                 label: "SUV",
                 value: 3
+                , isChecked: false
             },
             {
                 label: "MPV",
-                value: 4
+                value: 4,
+                isChecked: false
             },
             {
                 label: "BMW",
-                value: 5
+                value: 5,
+                isChecked: false
             },
             {
                 label: "Mercedes",
-                value: 6
+                value: 6,
+                isChecked: false
             }
         ],
         multiSelect: true,
@@ -60,20 +69,25 @@ export const allQuestions = [
         answerOptions: [
             {
                 label: "5",
-                value: 1
+                value: 1,
+                isChecked: false
             }, {
                 label: "6",
-                value: 2
+                value: 2,
+                isChecked: false
             }, {
                 label: "7",
-                value: 3
+                value: 3,
+                isChecked: false
             },
             {
                 label: "8",
-                value: 4
+                value: 4,
+                isChecked: false
             }, {
                 label: "9",
-                value: 5
+                value: 5,
+                isChecked: false
             }
         ],
         multiSelect: true,
@@ -81,7 +95,6 @@ export const allQuestions = [
         isDropDown: false,
         singleSelect: false,
         questionNumber: "3"
-
     },
     {
         label: "Which fuel type will you prefer ?",
@@ -89,22 +102,28 @@ export const allQuestions = [
         answerOptions: [
             {
                 label: "Petrol",
-                value: 1
+                value: 1,
+                isChecked: false
             }, {
                 label: "Diesel",
-                value: 2
+                value: 2,
+                isChecked: false
             }, {
                 label: "CNG",
-                value: 3
+                value: 3,
+                isChecked: false
             }, {
                 label: "Electric",
-                value: 4
+                value: 4,
+                isChecked: false
             }, {
                 label: "Demo Field",
-                value: 5
+                value: 5,
+                isChecked: false
             }, {
                 label: "Demo Field",
-                value: 6
+                value: 6,
+                isChecked: false
             }
         ],
         multiSelect: true,
@@ -120,11 +139,13 @@ export const allQuestions = [
             {
                 label: "Manual (with gear)",
                 isCorrect: false,
+                isChecked: false,
                 value: 1
             }, {
                 label: "Automatic (without gear)",
                 isCorrect: true,
                 value: 2
+                , isChecked: false
             }
         ],
         multiSelect: true,
@@ -182,7 +203,7 @@ export const allQuestions = [
         isDropDown: false,
         singleSelect: false,
         minMax: true,
-        questionNumber: "6a"
+        questionNumber: "7"
     },
     {
         labelMinimum: "For Finance options budget ready range to invest per month INR",
@@ -191,22 +212,22 @@ export const allQuestions = [
         downPaymentLabel: "Down Payment which can be paid /planning to pay cash INR",
         loanYears: [
             {
-                title: "1 Year",
+                title: "1",
                 value: 1
             }, {
-                title: "2 Year",
+                title: "2",
                 value: 2
 
             }, {
-                title: "3 Year",
+                title: "3",
                 value: 3
 
             }, {
-                title: "4 Year",
+                title: "4",
                 value: 4
 
             }, {
-                title: "5 Year",
+                title: "5",
                 value: 5
             }
         ],
@@ -259,36 +280,40 @@ export const allQuestions = [
         isDropDown: false,
         singleSelect: false,
         minMax: true,
-        questionNumber: "6b",
+        questionNumber: "8",
         loanPayment: true,
         downPayment: true
     },
     {
-        label: "For how many बears would like to keep this car with you ?",
+        label: "For how many Years would like to keep this car with you ?",
         value: 8,
         answerOptions: [
             {
                 label: "1 years",
                 value: 1
             }, {
-                label: "2-3 years",
+                label: "2 years",
                 value: 2
             }, {
-                label: "4-5 years",
+                label: "3 years",
                 value: 3
             }, {
-                label: "6-7 years",
+                label: "4 years",
                 value: 4
             }, {
-                label: "More than 8 years",
+                label: "5 years",
                 value: 5
+            },
+            , {
+                label: "6 years",
+                value: 6
             }
         ],
         multiSelect: false,
         isFill: false,
         isDropDown: false,
         singleSelect: true,
-        questionNumber: "7"
+        questionNumber: "9"
     },
 
     {
@@ -308,7 +333,7 @@ export const allQuestions = [
             }
         ],
         value: 9,
-        questionNumber: "8",
+        questionNumber: "10",
         downPayment: true
     },
     {
@@ -335,7 +360,7 @@ export const allQuestions = [
             }
         ],
         multiSelect: true,
-        questionNumber: "9"
+        questionNumber: "11"
     },
     {
         label: "What are the reasons for which you actually want to buy the desired car ? ( Arrange it in the descending order of priority ) For eg :-mention 1 for Top most need and 2 for lesser important need and so on",
@@ -361,7 +386,7 @@ export const allQuestions = [
                 id: 6
             }
         ],
-        questionNumber: "10",
+        questionNumber: "12",
         dragAndDrop: true
     },
     {
@@ -388,7 +413,7 @@ export const allQuestions = [
             }
         ],
         multiSelect: true,
-        questionNumber: "11"
+        questionNumber: "13"
     },
 
 
@@ -415,7 +440,7 @@ export const allQuestions = [
                 value: 3
             }
         ],
-        questionNumber: "12",
+        questionNumber: "14",
         getInformation: true,
         lastQuestion: true
     },

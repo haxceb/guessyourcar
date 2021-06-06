@@ -178,12 +178,12 @@ export default function Index() {
                 </Grid>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }} alignItems="center" justify="center">
                     <Card elevation={3} style={{ height: "100%", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <div>
-                            <Typography variant="h2" style={{ fontWeight: 700 }}>Take Short Quiz </Typography>
-                            <Typography variant="h4"> &amp;</Typography>
-                            <Typography variant="h4">Guess Your Product</Typography>
-                            <Typography variant="h6">(Basis your personality &amp; needs)</Typography>
-                            <Button size="large" onClick={handleGetStarted} style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '100%' }} variant="contained">Let's Start</Button>
+                        <div className="in-down">
+                            <Typography variant="h2" className="in-down" style={{ fontWeight: 700 }}>Take Short Quiz </Typography>
+                            <Typography variant="h4" className="in-down"> &amp;</Typography>
+                            <Typography variant="h4" className="in-down">Guess Your Product</Typography>
+                            <Typography variant="h6" className="in-down">(Basis your personality &amp; needs)</Typography>
+                            <Button size="large" className="in-down" onClick={handleGetStarted} style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '100%' }} variant="contained">Let's Start</Button>
                         </div>
                     </Card>
                 </Grid>
@@ -194,7 +194,7 @@ export default function Index() {
             </Grid>
             <Grid container className="mt-5" justify="center" xs={11} alignItems="center" className="m-auto" spacing={2}>
                 <Grid item>
-                    <Typography variant="h4" alignItems="center" className="mb-3 mt-2">Upcoming Cars </Typography>
+                    <Typography variant="h4" className="in-down" alignItems="center" className="mb-3 mt-2">Upcoming Cars </Typography>
                 </Grid>
                 {/* <Grid item container spacing={2} xs={12}>
                     <Slider {...settings}>
@@ -226,7 +226,7 @@ export default function Index() {
                     </Slider>
                 </Grid> */}
             </Grid>
-            <Grid className="pl-5 pr-5 mr-3 ml-3">
+            <Grid className="pl-5 pr-5 mr-3 ml-3 in-left">
                 <Slider {...settings}>
                     <UpcomingCarCard />
                     <UpcomingCarCard />
@@ -244,13 +244,13 @@ export default function Index() {
                 Ad Here
             </Grid>
 
-            <Grid container className="mt-5" justify="center" xs={11} alignItems="center" className="m-auto" spacing={2}>
+            <Grid container className="mt-5 in-down" justify="center" xs={11} alignItems="center" className="m-auto" spacing={2}>
                 <Grid item>
-                    <Typography variant="h4" alignItems="center" className="mb-3 mt-2">Tips </Typography>
+                    <Typography className="in-down" variant="h4" alignItems="center" className="mb-3 mt-2">Tips </Typography>
                 </Grid>
             </Grid>
 
-            <Grid className="pl-5 pr-5 mr-3 ml-3">
+            <Grid className="pl-5 pr-5 mr-3 ml-3 in-left">
                 <Slider {...settings}>
                     <UpcomingCarCard />
                     <UpcomingCarCard />
@@ -274,10 +274,10 @@ export default function Index() {
 
             <Grid container className="mt-5" justify="center" xs={11} alignItems="center" className="m-auto" spacing={2}>
                 <Grid item>
-                    <Typography variant="h4" alignItems="center" className="mb-3 mt-2">Testimonials </Typography>
+                    <Typography className="in-down" variant="h4" alignItems="center" className="mb-3 mt-2">Testimonials </Typography>
                 </Grid>
 
-                <Grid item container spacing={2} xs={12}>
+                <Grid item className="in-left" container spacing={2} xs={12}>
                     <Testimonials />
                 </Grid>
 
