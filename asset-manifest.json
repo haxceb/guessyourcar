@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/guessyourcar/static/css/main.232dd6cc.chunk.css",
-    "main.js": "/guessyourcar/static/js/main.ea086b48.chunk.js",
-    "main.js.map": "/guessyourcar/static/js/main.ea086b48.chunk.js.map",
-    "runtime-main.js": "/guessyourcar/static/js/runtime-main.7c15cb61.js",
-    "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.7c15cb61.js.map",
+    "main.css": "/guessyourcar/static/css/main.22974095.chunk.css",
+    "main.js": "/guessyourcar/static/js/main.a70fba42.chunk.js",
+    "main.js.map": "/guessyourcar/static/js/main.a70fba42.chunk.js.map",
+    "runtime-main.js": "/guessyourcar/static/js/runtime-main.d267d4a5.js",
+    "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.d267d4a5.js.map",
     "static/css/2.63b73c68.chunk.css": "/guessyourcar/static/css/2.63b73c68.chunk.css",
-    "static/js/2.8ac55c73.chunk.js": "/guessyourcar/static/js/2.8ac55c73.chunk.js",
-    "static/js/2.8ac55c73.chunk.js.map": "/guessyourcar/static/js/2.8ac55c73.chunk.js.map",
-    "static/js/3.7382c2cd.chunk.js": "/guessyourcar/static/js/3.7382c2cd.chunk.js",
-    "static/js/3.7382c2cd.chunk.js.map": "/guessyourcar/static/js/3.7382c2cd.chunk.js.map",
+    "static/js/2.e077d587.chunk.js": "/guessyourcar/static/js/2.e077d587.chunk.js",
+    "static/js/2.e077d587.chunk.js.map": "/guessyourcar/static/js/2.e077d587.chunk.js.map",
+    "static/js/3.78fd7c03.chunk.js": "/guessyourcar/static/js/3.78fd7c03.chunk.js",
+    "static/js/3.78fd7c03.chunk.js.map": "/guessyourcar/static/js/3.78fd7c03.chunk.js.map",
     "index.html": "/guessyourcar/index.html",
     "static/css/2.63b73c68.chunk.css.map": "/guessyourcar/static/css/2.63b73c68.chunk.css.map",
-    "static/css/main.232dd6cc.chunk.css.map": "/guessyourcar/static/css/main.232dd6cc.chunk.css.map",
-    "static/js/2.8ac55c73.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.8ac55c73.chunk.js.LICENSE.txt",
+    "static/css/main.22974095.chunk.css.map": "/guessyourcar/static/css/main.22974095.chunk.css.map",
+    "static/js/2.e077d587.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.e077d587.chunk.js.LICENSE.txt",
     "static/media/2021-mercedes-benz-s-class.7150b5ed.jpg": "/guessyourcar/static/media/2021-mercedes-benz-s-class.7150b5ed.jpg",
     "static/media/Datsunredigo.65829960.png": "/guessyourcar/static/media/Datsunredigo.65829960.png",
     "static/media/HONDA CITY.057b4913.png": "/guessyourcar/static/media/HONDA CITY.057b4913.png",
@@ -25,10 +25,10 @@
     "static/media/theo.b5b40e4f.jpg": "/guessyourcar/static/media/theo.b5b40e4f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c15cb61.js",
+    "static/js/runtime-main.d267d4a5.js",
     "static/css/2.63b73c68.chunk.css",
-    "static/js/2.8ac55c73.chunk.js",
-    "static/css/main.232dd6cc.chunk.css",
-    "static/js/main.ea086b48.chunk.js"
+    "static/js/2.e077d587.chunk.js",
+    "static/css/main.22974095.chunk.css",
+    "static/js/main.a70fba42.chunk.js"
   ]
 }
