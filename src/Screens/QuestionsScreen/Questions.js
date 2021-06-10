@@ -29,11 +29,11 @@ export const allQuestions = [
         value: 1,
         answerOptions: [
             {
-                label: "Sedan",
+                label: "SEDAN",
                 value: 1,
                 isChecked: false
             }, {
-                label: "Hatchback",
+                label: "HATCHBACK",
                 value: 2,
                 isChecked: false
             }, {
@@ -46,16 +46,16 @@ export const allQuestions = [
                 value: 4,
                 isChecked: false
             },
-            {
-                label: "BMW",
-                value: 5,
-                isChecked: false
-            },
-            {
-                label: "Mercedes",
-                value: 6,
-                isChecked: false
-            }
+            // {
+            //     label: "BMW",
+            //     value: 5,
+            //     isChecked: false
+            // },
+            // {
+            //     label: "MERCEDES",
+            //     value: 6,
+            //     isChecked: false
+            // }
         ],
         multiSelect: true,
         isFill: false,
@@ -64,8 +64,57 @@ export const allQuestions = [
         questionNumber: "2"
     },
     {
-        label: "How many seats you want in your car",
+        label: "Which brand of car you would like to own ?",
         value: 2,
+        answerOptions: [
+            {
+                label: "AUDI",
+                value: 1,
+                isChecked: false
+            }, {
+                label: "BMW",
+                value: 2,
+                isChecked: false
+            }, {
+                label: "MARUTI SUZUKI",
+                value: 3
+                , isChecked: false
+            },
+            {
+                label: "DATSUN",
+                value: 4,
+                isChecked: false
+            },
+            {
+                label: "FORD",
+                value: 5,
+                isChecked: false
+            },
+            {
+                label: "TATA",
+                value: 6,
+                isChecked: false
+            },
+            {
+                label: "HONDA",
+                value: 7,
+                isChecked: false
+            },
+            {
+                label: "HYUNDAI",
+                value: 8,
+                isChecked: false
+            },
+        ],
+        multiSelect: true,
+        isFill: false,
+        isDropDown: false,
+        singleSelect: false,
+        questionNumber: "3"
+    },
+    {
+        label: "How many seats you want in your car",
+        value: 3,
         answerOptions: [
             {
                 label: "5",
@@ -94,18 +143,18 @@ export const allQuestions = [
         isFill: false,
         isDropDown: false,
         singleSelect: false,
-        questionNumber: "3"
+        questionNumber: "4"
     },
     {
         label: "Which fuel type will you prefer ?",
-        value: 3,
+        value: 4,
         answerOptions: [
             {
-                label: "Petrol",
+                label: "PETROL",
                 value: 1,
                 isChecked: false
             }, {
-                label: "Diesel",
+                label: "DIESEL",
                 value: 2,
                 isChecked: false
             }, {
@@ -113,36 +162,38 @@ export const allQuestions = [
                 value: 3,
                 isChecked: false
             }, {
-                label: "Electric",
+                label: "ELECTRIC",
                 value: 4,
                 isChecked: false
-            }, {
-                label: "Demo Field",
-                value: 5,
-                isChecked: false
-            }, {
-                label: "Demo Field",
-                value: 6,
-                isChecked: false
             }
+            // , {
+            //     label: "Demo Field",
+            //     value: 5,
+            //     isChecked: false
+            // },
+            // {
+            //     label: "Demo Field",
+            //     value: 6,
+            //     isChecked: false
+            // }
         ],
         multiSelect: true,
         isFill: false,
         isDropDown: false,
         singleSelect: false,
-        questionNumber: "4"
+        questionNumber: "5"
     },
     {
         label: "Which is your preferred transmission ?",
-        value: 4,
+        value: 5,
         answerOptions: [
             {
-                label: "Manual (with gear)",
+                label: "MANUAL",
                 isCorrect: false,
                 isChecked: false,
                 value: 1
             }, {
-                label: "Automatic (without gear)",
+                label: "AUTOMATIC",
                 isCorrect: true,
                 value: 2
                 , isChecked: false
@@ -152,17 +203,17 @@ export const allQuestions = [
         isFill: false,
         isDropDown: false,
         singleSelect: false,
-        questionNumber: "5"
+        questionNumber: "6"
     },
     {
         label: "Would you like to buy car via ?",
-        value: 5,
+        value: 6,
         answerOptions: [
             {
-                label: "Full Cash",
+                label: "CASH",
                 value: 1
             }, {
-                label: "Finance",
+                label: "FINANCE",
                 value: 2
             }
         ],
@@ -170,30 +221,30 @@ export const allQuestions = [
         isFill: false,
         isDropDown: false,
         singleSelect: true,
-        questionNumber: "6"
+        questionNumber: "7"
     },
     {
         labelMinimum: "For cash options budget ready range to invest INR",
         labelMaximum: "To INR",
-        value: 6,
+        value: 7,
         minimumOptions: [
             {
-                title: "20 Lacs",
+                title: "2000000",
                 value: 1
             }, {
-                title: "30 Lacs",
+                title: "30000000",
                 value: 2
 
             }, {
-                title: "40 Lacs",
+                title: "40000000",
                 value: 3
 
             }, {
-                title: "50 Lacs",
+                title: "50000000",
                 value: 4
 
             }, {
-                title: "60 Lacs",
+                title: "60000000",
                 value: 5
 
             }
@@ -203,7 +254,7 @@ export const allQuestions = [
         isDropDown: false,
         singleSelect: false,
         minMax: true,
-        questionNumber: "7"
+        questionNumber: "8"
     },
     {
         labelMinimum: "For Finance options budget ready range to invest per month INR",
@@ -233,44 +284,44 @@ export const allQuestions = [
         ],
         downPaymentOptions: [
             {
-                title: "50,000",
+                title: "50000",
                 value: 1
             }, {
-                title: "100,000",
+                title: "100000",
                 value: 2
 
             }, {
-                title: "10,00,000",
+                title: "1000000",
                 value: 3
 
             }, {
-                title: "15,00,000 ",
+                title: "1500000 ",
                 value: 4
 
             }, {
-                title: "20,00,000",
+                title: "2000000",
                 value: 5
             }
         ],
         value: 7,
         minimumOptions: [
             {
-                title: "20 Lacs",
+                title: "2000000",
                 value: 1
             }, {
-                title: "30 Lacs",
+                title: "3000000",
                 value: 2
 
             }, {
-                title: "40 Lacs",
+                title: "4000000",
                 value: 3
 
             }, {
-                title: "50 Lacs",
+                title: "5000000",
                 value: 4
 
             }, {
-                title: "60 Lacs",
+                title: "6000000",
                 value: 5
 
             }
@@ -280,7 +331,7 @@ export const allQuestions = [
         isDropDown: false,
         singleSelect: false,
         minMax: true,
-        questionNumber: "8",
+        questionNumber: "9",
         loanPayment: true,
         downPayment: true
     },
@@ -313,7 +364,7 @@ export const allQuestions = [
         isFill: false,
         isDropDown: false,
         singleSelect: true,
-        questionNumber: "9"
+        questionNumber: "10"
     },
 
     {
@@ -333,34 +384,8 @@ export const allQuestions = [
             }
         ],
         value: 9,
-        questionNumber: "10",
+        questionNumber: "11",
         downPayment: true
-    },
-    {
-        label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscingelit, Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-        value: 10,
-        answerOptions: [
-            {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 1
-            }, {
-                label: "consectetur adipiscing",
-                isCorrect: true,
-                value: 2
-            }, {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 3
-            },
-            {
-                label: "consectetur adipiscing",
-                isCorrect: false,
-                value: 3
-            }
-        ],
-        multiSelect: true,
-        questionNumber: "11"
     },
     {
         label: "What are the reasons for which you actually want to buy the desired car ? ( Arrange it in the descending order of priority ) For eg :-mention 1 for Top most need and 2 for lesser important need and so on",

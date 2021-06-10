@@ -57,19 +57,31 @@ export default function Index() {
         }
     }
 
-    console.log(Object.keys(checkBox[2]))
+    console.log(Object.keys(checkBox[2]));
+    const checkEmotion = () => {
+        let val = checkBox[1]?.value ?? 1;
+        if (val === "1") {
+            return 'ASPIRATIONAL';
+        } else if (val === "2") {
+            return 'EMOTIONAL'
+        } else return 'RATIONAL'
+    }
+
+    const converttoNumber = () => {
+        return Object.keys(checkBox[4])?.map((i) => Number(i))
+    }
 
     let req = {
-        emotion: checkBox[1]?.label ?? 'RATIONAL',
+        emotion: checkEmotion(),
         carType: Object.keys(checkBox[2]) ?? ["SUV"],
-        fundingOption: checkBox[6]?.label ?? 'CASH',
-        minCashBudget: Number(checkBox[7]?.minCashBudget) ?? 200000,
-        maxCashBudget: Number(checkBox[7]?.maxCashBudget) ?? 100000000,
-        loanTenure: Number(checkBox[8]?.minLoanValue) ?? 4,
-        minEMI: Number(checkBox[8]?.minCashBudget) ?? 20000,
-        maxEMI: Number(checkBox[8]?.maxCashBudget) ?? 200000,
-        downPayment: Number(checkBox[8]?.minDownPayment) ?? 200000,
-        transmissionType: Object.keys(checkBox[5] ?? ['AUTOMATIC']),
+        fundingOption: checkBox[8]?.label ?? 'CASH',
+        minCashBudget: Number(checkBox[8]?.minCashBudget) ?? 200000,
+        maxCashBudget: Number(checkBox[8]?.maxCashBudget) ?? 100000000,
+        loanTenure: Number(checkBox[9]?.minLoanValue) ?? 4,
+        minEMI: Number(checkBox[9]?.minCashBudget) ?? 20000,
+        maxEMI: Number(checkBox[9]?.maxCashBudget) ?? 200000,
+        downPayment: Number(checkBox[9]?.minDownPayment) ?? 200000,
+        transmissionType: Object.keys(checkBox[6] ?? ['AUTOMATIC']),
         reasonStatus: 0,
         reasonEnginePower: 0,
         reasonLuggageSpace: 0,
@@ -77,25 +89,25 @@ export default function Index() {
         reasonLatestCar: 0,
         reasonComfort: 0,
         reasonStyle: 0,
-        fuelType: Object.keys(checkBox[4] ?? ['PETROL']),
-        seatingCapacity: Object.keys(checkBox[3] ?? ['5']),
-        brand: Object.keys(checkBox[2]) ?? [
+        fuelType: Object.keys(checkBox[5] ?? ['PETROL']),
+        seatingCapacity: converttoNumber(),
+        brand: Object.keys(checkBox[3]) ?? [
             "MARUTI"
         ],
         fullName: `${checkBox[14]?.firstName} ${checkBox[14]?.lastName}`,
         emailAddress: "abcsas@xyz.com",
         mobileNumber: checkBox[14]?.mobileNumber,
         city: checkBox[14]?.city,
-        duration: Number(checkBox[9]?.value) ?? 4,
-        running: Number(checkBox[10]?.minDownPayment) ?? 100,
+        duration: Number(checkBox[10]?.value) ?? 4,
+        running: Number(checkBox[11]?.minDownPayment) ?? 100,
         advanceFeatures: {
             noPreference: true,
             sunroof: false,
             turboEngine: false,
-            cruiseControl: false,
+            cruiseControl: true,
             rearACVents: false,
             moreThanTwoAirBags: false,
-            driveType: "ANY",
+            driveType: "FRONT",
             engineCapacity: "ONE"
         }
     }
