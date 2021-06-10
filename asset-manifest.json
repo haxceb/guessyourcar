@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/guessyourcar/static/css/main.22974095.chunk.css",
-    "main.js": "/guessyourcar/static/js/main.a70fba42.chunk.js",
-    "main.js.map": "/guessyourcar/static/js/main.a70fba42.chunk.js.map",
+    "main.js": "/guessyourcar/static/js/main.b4cf10ec.chunk.js",
+    "main.js.map": "/guessyourcar/static/js/main.b4cf10ec.chunk.js.map",
     "runtime-main.js": "/guessyourcar/static/js/runtime-main.d267d4a5.js",
     "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.d267d4a5.js.map",
     "static/css/2.63b73c68.chunk.css": "/guessyourcar/static/css/2.63b73c68.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.63b73c68.chunk.css",
     "static/js/2.e077d587.chunk.js",
     "static/css/main.22974095.chunk.css",
-    "static/js/main.a70fba42.chunk.js"
+    "static/js/main.b4cf10ec.chunk.js"
   ]
 }
