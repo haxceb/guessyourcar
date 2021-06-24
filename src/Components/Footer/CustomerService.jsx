@@ -3,17 +3,12 @@ import React from 'react';
 function CustomerService() {
 	return (
 		<ul className="list">
+			
 			<li>
-				<a href="">Phone: +123.456.789</a>
+				<a href="">Contact Us</a>
 			</li>
 			<li>
-				<a href="">Contact</a>
-			</li>
-			<li>
-				<a href="">MyAccount</a>
-			</li>
-			<li>
-				<a href="">Stores</a>
+				<a href="">Terms &amp; Conditions</a>
 			</li>
 		</ul>
 	);

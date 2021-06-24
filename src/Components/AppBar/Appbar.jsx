@@ -202,70 +202,70 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <div className="container-fluid">
-      <div className="w-100">
-        <AppBar elevation={0} color="transparent" position="static">
-          <Toolbar>
+    <>
+      {/* <div className="w-100"> */}
+      <AppBar elevation={1} color="white" position="fixed">
+        <Toolbar>
+          <Link to="/">
+            <Avatar variant="square" className={classes.avatar} src={Logo} />{" "}
+          </Link>
+
+          <div className={classes.search}>
             <Link to="/">
-              <Avatar variant="square" className={classes.avatar} src={Logo} />{" "}
+              <Typography variant="h4" style={{ fontWeight: 800 }}>
+                <span className="text-primary">G</span>uess
+                <span className="text-success">Y</span>our
+                <span className="text-danger">C</span>ar
+              </Typography>
             </Link>
+          </div>
+          <div className={classes.grow} />
 
-            <div className={classes.search}>
-              <Link to="/">
-                <Typography variant="h4" style={{ fontWeight: 800 }}>
-                  <span className="text-primary">G</span>uess
-                  <span className="text-success">Y</span>our
-                  <span className="text-danger">C</span>ar
-                </Typography>
-              </Link>
-            </div>
-            <div className={classes.grow} />
+          <div className={classes.sectionDesktop}>
+            <MenuItem>
+              <Link to="/quiz">Guess Car </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/upcoming-cars">Upcoming Cars</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/">Testimonials</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/tips">Tips</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/login">Login</Link>
+            </MenuItem>
+            <MenuItem>English</MenuItem>
 
-            <div className={classes.sectionDesktop}>
-              <MenuItem>
-                <Link to="/quiz">Guess Car </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/upcoming-cars">Upcoming Cars</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/">Testimonials</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/tips">Tips</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/login">Login</Link>
-              </MenuItem>
-              <MenuItem>English</MenuItem>
+            <MenuItem>
+              <FacebookIcon style={{ color: "#3b5998" }} />
+            </MenuItem>
+            <MenuItem>
+              <TwitterIcon style={{ color: "#00acee" }} />
+            </MenuItem>
 
-              <MenuItem>
-                <FacebookIcon style={{ color: "#3b5998" }} />
-              </MenuItem>
-              <MenuItem>
-                <TwitterIcon style={{ color: "#00acee" }} />
-              </MenuItem>
-
-              <MenuItem>
-                <YouTubeIcon style={{ color: "#c4302b" }} />
-              </MenuItem>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-      </div>
-    </div>
+            <MenuItem>
+              <YouTubeIcon style={{ color: "#c4302b" }} />
+            </MenuItem>
+          </div>
+          <div className={classes.sectionMobile}>
+            <IconButton
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MoreIcon />
+            </IconButton>
+          </div>
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+      {/* </div> */}
+    </>
   );
 }

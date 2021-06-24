@@ -4,7 +4,7 @@ function FooterLast() {
 	return (
 		<div className="d-flex justify-content-between container-fluid bg-light">
 			<div>
-				<p>Copyright © 2018 by Guess Your Car.</p>
+				<p>Copyright @2021 GuessYourCar.com. All Rights Reserved.</p>
 			</div>
 			<div>
 				{/* <img src={Image} alt="no image" /> */}

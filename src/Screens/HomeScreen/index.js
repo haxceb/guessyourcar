@@ -5,7 +5,6 @@ import BannerImage from '../../Media/pic1.jpg'
 import Image from '../../Media/Datsunredigo.png'
 import UpcomingCarCard from '../../Components/UpcomingCar/UpcomingCar'
 import NewsLetter from '../../Components/NewsLetter/NewsLetter'
-import FooterAll from '../../Components/Footer/FooterAll'
 import Slider from "react-slick";
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -13,10 +12,10 @@ import CarImage from "../../Media/2021-mercedes-benz-s-class.jpg";
 import Testimonials from '../../Components/UserExperience/userexperience'
 import { useHistory } from "react-router";
 import { Link } from 'react-router-dom';
-import pic1 from '../../Media/pic1.jpg';
-import pic2 from '../../Media/pic2.jpg';
-import pic3 from '../../Media/pic3.jpg';
-import pic4 from '../../Media/pic4.jpg';
+import pic1 from '../../Media/pic1-min-min.jpg';
+import pic2 from '../../Media/pic2-min-min.jpg';
+import pic3 from '../../Media/pic3-min-min.jpg';
+import pic4 from '../../Media/pic4-min-min.jpg';
 
 
 
@@ -26,29 +25,26 @@ export default function Index() {
 
     var bannerSliderSetting = {
         infinite: true,
-        speed: 2000,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         initialSlide: 0,
-        responsive: [{
-            breakpoint: 500,
-            bannerSliderSetting: {
-                infinite: true,
-                speed: 2000,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                initialSlide: 0,
-            }
-        }
-        ]
+        dots: false,
+        nextArrow:
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+            </svg>
+        ,
+        prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+        </svg>,
     }
 
     var settings = {
         dots: true,
         infinite: true,
-        speed: 2000,
+        speed: 500,
         className: "center",
         centerMode: true,
         centerPadding: "100px",
@@ -57,11 +53,11 @@ export default function Index() {
         autoplay: true,
         initialSlide: 0,
         nextArrow:
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
                 <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
             </svg>
         ,
-        prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+        prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
             <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
         </svg>,
         responsive: [
@@ -70,7 +66,7 @@ export default function Index() {
                 settings: {
                     dots: true,
                     infinite: true,
-                    speed: 1500,
+                    speed: 500,
                     className: "center",
                     centerMode: true,
                     centerPadding: "10px",
@@ -79,11 +75,11 @@ export default function Index() {
                     autoplay: true,
                     initialSlide: 0,
                     nextArrow:
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
                             <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
                         </svg>
                     ,
-                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                         <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
                     </svg>,
                 }
@@ -93,7 +89,7 @@ export default function Index() {
                 settings: {
                     dots: true,
                     infinite: true,
-                    speed: 2000,
+                    speed: 500,
                     className: "center",
                     centerMode: true,
                     centerPadding: "20px",
@@ -102,11 +98,11 @@ export default function Index() {
                     autoplay: true,
                     initialSlide: 0,
                     nextArrow:
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
                             <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
                         </svg>
                     ,
-                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                         <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
                     </svg>,
                 }
@@ -114,22 +110,22 @@ export default function Index() {
             {
                 breakpoint: 480,
                 settings: {
-                    dots: true,
+                    dots: false,
                     infinite: true,
-                    speed: 1800,
+                    speed: 500,
                     className: "center",
-                    centerMode: true,
-                    centerPadding: "0px",
+                    centerMode: false,
+                    centerPadding: "10px",
                     slidesToShow: 1,
-                    slidesToScroll: 2,
+                    slidesToScroll: 3,
                     autoplay: true,
-                    initialSlide: 0,
+                    initialSlide: 1,
                     nextArrow:
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
                             <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
                         </svg>
                     ,
-                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC000" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                         <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
                     </svg>,
                 }
@@ -146,11 +142,11 @@ export default function Index() {
     }
     return (
         <>
-            <Grid container >
-                <div className="w-100 h-100" style={{ position: 'absolute', opacity: 0.15 }}>
+            <Grid container style={{ marginTop: 75, backgroundColor: 'lightgrey' }}>
+                {/* <div className="w-100 h-100" style={{ position: 'absolute', opacity: 0.15 }}>
                     <img src={CarImage} className="h-75 w-100 img-fluid" />
-                </div>
-                <Grid item lg={6} sm={12} style={{ padding: "50px" }}>
+                </div> */}
+                <Grid item lg={6} sm={12} style={{ padding: "50px", width: '100vw', }}>
                     <Slider {...bannerSliderSetting}>
 
                         <div elevation={3} style={{ height: '100%' }}>
@@ -177,13 +173,13 @@ export default function Index() {
 
                 </Grid>
                 <Grid item lg={6} sm={12} style={{ padding: "50px" }} alignItems="center" justify="center">
-                    <Card elevation={3} style={{ height: "100%", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Card elevation={3} style={{ height: "100%", backgroundColor: 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <div className="in-down">
                             <Typography variant="h2" className="in-down" style={{ fontWeight: 700 }}>Take Short Quiz </Typography>
                             <Typography variant="h4" className="in-down"> &amp;</Typography>
-                            <Typography variant="h4" className="in-down">Guess Your Product</Typography>
+                            <Typography variant="h4" className="in-down">Guess Your Car</Typography>
                             <Typography variant="h6" className="in-down">(Basis your personality &amp; needs)</Typography>
-                            <Button size="large" className="in-down" onClick={handleGetStarted} style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '100%' }} variant="contained">Let's Start</Button>
+                            <Button className="transition" onClick={handleGetStarted} style={{ marginTop: 20, backgroundColor: '#FFC000', fontSize: 20, fontWeight: 900, color: 'white', width: '70%', }} variant="contained">Let's Start</Button>
                         </div>
                     </Card>
                 </Grid>
@@ -196,35 +192,6 @@ export default function Index() {
                 <Grid item>
                     <Typography variant="h4" className="in-down" alignItems="center" className="mb-3 mt-2">Upcoming Cars </Typography>
                 </Grid>
-                {/* <Grid item container spacing={2} xs={12}>
-                    <Slider {...settings}>
-
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
-                            <UpcomingCarCard />
-                        </Grid>
-                    </Slider>
-                </Grid> */}
             </Grid>
             <Grid className="pl-5 pr-5 mr-3 ml-3 in-left">
                 <Slider {...settings}>

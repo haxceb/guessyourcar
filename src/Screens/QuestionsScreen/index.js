@@ -121,7 +121,7 @@ export default function Index() {
         }
     }
     return (
-        <Grid container >
+        <Grid container style={{ marginTop: 80 }} >
             <Grid item container xs={12} md={10} className="p-5">
                 <Grid item xs={12} className="mb-3">
                     <LinearProgress variant="buffer" color="primary" value={(questionNumber * 8.33)} valueBuffer={questionNumber * 10} />
@@ -137,11 +137,11 @@ export default function Index() {
                 <Grid item container xs={12}>
                     {handleQuestions()}
                 </Grid>
-                <Grid item container xs={12} className="mb-3 mt-4" justify="center">
-                    <Button variant="contained" className="mr-5" color="primary" onClick={handlePreviousClick} startIcon={<ArrowLeftIcon />}>Previous</Button>
+                <Grid item container xs={12} className="mb-3 mt-4" justify="space-around">
+                    <Button variant="contained" className="mr-5" style={{ backgroundColor: '#FCC000' }} onClick={handlePreviousClick} startIcon={<ArrowLeftIcon />}>Previous</Button>
                     {allQuestions[questionNumber - 1]?.lastQuestion ?
-                        <Button variant="contained" color="primary" className="" onClick={handleSubmit}>Submit</Button> :
-                        <Button variant="contained" color="primary" className="" onClick={handleNextClick} endIcon={<ArrowRightIcon />}>Next</Button>}
+                        <Button variant="contained" style={{ backgroundColor: '#FCC000' }} className="" onClick={handleSubmit}>Submit</Button> :
+                        <Button variant="contained" style={{ backgroundColor: '#FCC000' }} className="" onClick={handleNextClick} endIcon={<ArrowRightIcon />}>Next</Button>}
                 </Grid>
             </Grid>
             <Grid item container xs={2} className="border mb-2 mt-2" justify="center" alignContent="center">

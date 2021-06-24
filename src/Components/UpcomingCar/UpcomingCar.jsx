@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CarImage from "../../Media/HONDA CITY.png";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -18,10 +19,11 @@ const useStyles = makeStyles({
 
 export default function UpcomingCarCard({ image, heading, description }) {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <Card elevation={3} className={classes.root}>
-      <CardActionArea>
+      <CardActionArea onClick={() => history.push("/detail")}>
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -43,6 +45,7 @@ export default function UpcomingCarCard({ image, heading, description }) {
           size="small"
           variant="contained"
           style={{ backgroundColor: "#FFC000" }}
+          onClick={() => history.push("/detail")}
         >
           Read More ...
         </Button>

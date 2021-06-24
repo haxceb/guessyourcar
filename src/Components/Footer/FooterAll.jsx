@@ -8,12 +8,12 @@ import "./footer.css";
 import OnlineCard from "./OnlineCard";
 
 function FooterAll() {
-  const [count, setcount] = useState([1, 2, 3, 4, 5]);
+  const [count, setcount] = useState([ 2, 3,4, 5]);
 
   return (
     <div>
       <div>
-        <div className="parent">
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
           {count.map((count) => {
             if (count == 1) {
               return (
@@ -29,15 +29,7 @@ function FooterAll() {
                       </p>
                     }
                   />
-                  <div className="opening-time">
-                    <p className="opentime">OPENING TIME</p>
-                    <p>
-                      Monday - Friday .... 8.00 to 18.00 <br />
-                      Saturday ............ 9.00 to 21.00
-                      <br />
-                      Sunday ............ 10.00 to 21.00
-                    </p>
-                  </div>
+
                 </div>
               );
             } else if (count == 2) {
