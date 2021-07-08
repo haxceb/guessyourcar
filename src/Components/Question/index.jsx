@@ -4,8 +4,9 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
-import { Checkbox, Typography } from "@material-ui/core";
+import { Checkbox, Grid, Typography } from "@material-ui/core";
 import { Container } from "../DragandDrop/Container";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 export default function Index({
   currentQuestion,
@@ -36,8 +37,13 @@ export default function Index({
     });
   };
 
-  const handleCheckboxChange = (event, index) => {
+  const handleCheckboxChange = (event, index, id) => {
     answerOptions[index].isChecked = !answerOptions[index].isChecked;
+    if (answerOptions[index].options) {
+      answerOptions[index].options[id].isChecked = !answerOptions[index]
+        .options[id].isChecked;
+    }
+
     let newObject = checkBox[questionNumber];
     newObject = {
       ...newObject,
@@ -53,9 +59,19 @@ export default function Index({
   return (
     <FormControl component="fieldset">
       <FormLabel style={{ color: "black" }}>
-        <Typography variant="h6" className="in-down" align="justify">
+        <Typography variant="h6" align="justify">
           {currentQuestion?.label}
         </Typography>
+        {currentQuestion?.label2 && (
+          <Typography variant="h6" align="justify">
+            {currentQuestion?.label2}
+          </Typography>
+        )}
+        {currentQuestion?.label3 && (
+          <Typography variant="h6" align="justify">
+            {currentQuestion?.label3}
+          </Typography>
+        )}
       </FormLabel>
       {singleSelect &&
         answerOptions?.map((item, index) => {
@@ -65,7 +81,7 @@ export default function Index({
               name="answerOptions"
               value={Number(checkBox[questionNumber]?.value)}
               onChange={(e) => handleChange(e, index, item)}
-              className="in-left"
+              className="ml-5"
             >
               <FormControlLabel
                 value={item?.value}
@@ -75,25 +91,74 @@ export default function Index({
             </RadioGroup>
           );
         })}
-      {multiSelect &&
-        answerOptions?.map((item, index) => {
-          return (
-            <FormControlLabel
-              value={value}
-              className="in-down"
-              control={
-                <Checkbox
-                  checked={item?.isChecked}
-                  onChange={(e) => handleCheckboxChange(e, index)}
-                  name={item?.label}
-                  className="in-left"
-                  color="primary"
-                />
-              }
-              label={item?.label}
-            />
-          );
-        })}
+
+      {multiSelect && (
+        <Grid container xs={12}>
+          {answerOptions?.map((item, index) => {
+            return (
+              <Grid
+                item
+                container
+                lg={currentQuestion?.twoColumns ? 6 : 12}
+                xs={12}
+                direction={item?.options && "column"}
+              >
+                <FormControlLabel
+                  value={value}
+                  className="ml-5"
+                  control={
+                    !item?.options ? (
+                      <Checkbox
+                        checked={item?.isChecked}
+                        onChange={(e) => handleCheckboxChange(e, index)}
+                        name={item?.label}
+                        color="primary"
+                      />
+                    ) : (
+                      <Checkbox
+                        checked={true}
+                        // onChange={(e) => handleCheckboxChange(e, index)}
+                        name={item?.label}
+                        color="primary"
+                        checkedIcon={<ArrowRightIcon />}
+                      />
+                    )
+                  }
+                  label={item?.label}
+                ></FormControlLabel>
+                {currentQuestion?.icons && (
+                  <img src={item?.icon} height={70} width={100} />
+                )}
+                {item?.options &&
+                  item?.options?.map((value, id) => {
+                    return (
+                      <FormControlLabel
+                        value={value}
+                        style={{ marginLeft: 100 }}
+                        control={
+                          <Checkbox
+                            checked={value?.isChecked}
+                            onChange={(e) => handleCheckboxChange(e, index, id)}
+                            name={value?.label}
+                            color="primary"
+                          />
+                        }
+                        label={value?.label}
+                      ></FormControlLabel>
+                    );
+                  })}
+              </Grid>
+            );
+          })}
+
+          {questionNumber === 8 && (
+            <Typography variant="h6">
+              Note :- Person who want to finance their car partially, pls select
+              cash option only for correct budgeting.
+            </Typography>
+          )}
+        </Grid>
+      )}
 
       {dragAndDrop && (
         <Container

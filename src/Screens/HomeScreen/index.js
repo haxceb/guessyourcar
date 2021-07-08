@@ -12,10 +12,10 @@ import CarImage from "../../Media/2021-mercedes-benz-s-class.jpg";
 import Testimonials from '../../Components/UserExperience/userexperience'
 import { useHistory } from "react-router";
 import { Link } from 'react-router-dom';
-import pic1 from '../../Media/pic1-min-min.jpg';
-import pic2 from '../../Media/pic2-min-min.jpg';
-import pic3 from '../../Media/pic3-min-min.jpg';
-import pic4 from '../../Media/pic4-min-min.jpg';
+import pic1 from '../../Media/1.webp';
+import pic2 from '../../Media/2.webp';
+import pic3 from '../../Media/3.webp';
+import pic4 from '../../Media/4.webp';
 
 
 

@@ -1,5 +1,5 @@
 import { Button, Grid, LinearProgress, Typography } from '@material-ui/core';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Question from '../../Components/Question';
 import { Alert } from '@material-ui/lab';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
@@ -14,8 +14,8 @@ export default function Index() {
     const [questionNumber, setQuestionNumber] = useState(1);
 
     const [allQuizQuestions, setAllQuizQuestions] = useState(allQuestions);
+    const [isDisabled, setIsDisabled] = useState(true);
 
-    const [allAnswers, setAllAnswers] = useState({});
     const [checkBox, setCheckBox] = useState({
         1: {},
         2: {},
@@ -37,17 +37,30 @@ export default function Index() {
 
 
     const handleNextClick = () => {
+        console.log({ questionNumber })
+        console.log(allQuestions.length)
+
         if ((questionNumber + 1) <= allQuestions?.length) {
-            setQuestionNumber(questionNumber + 1);
+            if (checkBox[questionNumber]?.FINANCE) {
+                setQuestionNumber(questionNumber + 2);
+            } else if (checkBox[6]?.CASH && allQuestions[questionNumber - 1]?.questionNumber === "7")
+                setQuestionNumber(questionNumber + 2);
+            else setQuestionNumber(questionNumber + 1);
         }
     }
     const handlePreviousClick = () => {
         if ((questionNumber - 1) !== 0) {
-            setQuestionNumber(questionNumber - 1);
+            if (checkBox[6]?.FINANCE && allQuestions[questionNumber - 1]?.questionNumber === "7") {
+                setQuestionNumber(questionNumber - 2);
+            } else if (checkBox[6]?.CASH && allQuestions[questionNumber - 1]?.questionNumber === "8")
+                setQuestionNumber(questionNumber - 2);
+            else
+                setQuestionNumber(questionNumber - 1);
         }
     }
 
     const handleQuestions = () => {
+
         if (allQuestions[questionNumber - 1]?.minMax || allQuestions[questionNumber - 1]?.loanPayment || allQuestions[questionNumber - 1]?.downPayment) {
             return <MinMaxQuestion currentQuestion={allQuestions[questionNumber - 1]} checkBox={checkBox} questionNumber={questionNumber} setCheckBox={setCheckBox} />;
         } else if (allQuestions[questionNumber - 1]?.getInformation) {
@@ -57,7 +70,19 @@ export default function Index() {
         }
     }
 
-    console.log(Object.keys(checkBox[2]));
+
+
+    useEffect(() => {
+        if (checkBox[questionNumber] && Object?.keys(checkBox[questionNumber])?.length !== 0) {
+            setIsDisabled(false)
+        } else {
+            setIsDisabled(true)
+        }
+
+    }, [questionNumber, checkBox])
+
+
+
     const checkEmotion = () => {
         let val = checkBox[1]?.value ?? 1;
         if (val === "1") {
@@ -132,7 +157,7 @@ export default function Index() {
                     </Alert>
                 </Grid>
                 <Grid item container xs={12} className="mb-3 mt-4">
-                    <Typography variant="h5" style={{ fontWeight: 700 }}>Question # {questionNumber}/<span style={{ fontSize: '16px' }}>{allQuestions?.length}</span></Typography>
+                    <Typography variant="h5" style={{ fontWeight: 700 }}>Question # {allQuestions[questionNumber - 1]?.questionNumber}/<span style={{ fontSize: '16px' }}>{allQuestions?.length - 1}</span></Typography>
                 </Grid>
                 <Grid item container xs={12}>
                     {handleQuestions()}
@@ -140,8 +165,8 @@ export default function Index() {
                 <Grid item container xs={12} className="mb-3 mt-4" justify="space-around">
                     <Button variant="contained" className="mr-5" style={{ backgroundColor: '#FCC000' }} onClick={handlePreviousClick} startIcon={<ArrowLeftIcon />}>Previous</Button>
                     {allQuestions[questionNumber - 1]?.lastQuestion ?
-                        <Button variant="contained" style={{ backgroundColor: '#FCC000' }} className="" onClick={handleSubmit}>Submit</Button> :
-                        <Button variant="contained" style={{ backgroundColor: '#FCC000' }} className="" onClick={handleNextClick} endIcon={<ArrowRightIcon />}>Next</Button>}
+                        <Button variant="contained" disabled={isDisabled} style={{ backgroundColor: '#FCC000' }} className="" onClick={handleSubmit}>Submit</Button> :
+                        <Button variant="contained" disabled={isDisabled} style={{ backgroundColor: '#FCC000' }} className="" onClick={handleNextClick} endIcon={<ArrowRightIcon />}>Next</Button>}
                 </Grid>
             </Grid>
             <Grid item container xs={2} className="border mb-2 mt-2" justify="center" alignContent="center">

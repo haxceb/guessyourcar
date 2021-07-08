@@ -94,15 +94,11 @@ export default function MinMaxQuestion({
               className="in-down"
               getOptionLabel={(option) => option.title}
               style={{ width: 120 }}
-              value={
-                checkBox?.[questionNumber]?.minCashBudget
-              }
+              value={checkBox?.[questionNumber]?.minCashBudget}
               onChange={(event, newValue) => {
                 setMinValue(newValue?.title);
               }}
-              inputValue={
-                checkBox?.[questionNumber]?.minCashBudget
-              }
+              inputValue={checkBox?.[questionNumber]?.minCashBudget}
               onInputChange={(event, newInputValue) => {
                 setInputMinValue(newInputValue);
               }}
@@ -121,16 +117,12 @@ export default function MinMaxQuestion({
               getOptionLabel={(option) => option.title}
               className="in-down"
               style={{ width: 120 }}
-              value={
-                checkBox?.[questionNumber]?.maxCashBudget
-              }
+              value={checkBox?.[questionNumber]?.maxCashBudget}
               onChange={(event, newValue) => {
                 console.log({ newValue });
                 setMaxValue(newValue?.title);
               }}
-              inputValue={
-                checkBox?.[questionNumber]?.maxCashBudget
-              }
+              inputValue={checkBox?.[questionNumber]?.maxCashBudget}
               onInputChange={(event, newInputValue) => {
                 setInputMaxValue(newInputValue);
               }}
@@ -157,15 +149,12 @@ export default function MinMaxQuestion({
               onChange={(event, newValue) => {
                 setMinLoanValue(newValue?.title);
               }}
-              inputValue={
-                checkBox?.[questionNumber]?.minLoanValue
-              }
+              inputValue={checkBox?.[questionNumber]?.minLoanValue}
               onInputChange={(event, newInputValue) => {
                 setInputMinLoanValue(newInputValue);
               }}
               renderInput={(params) => <TextField {...params} />}
             />
-            <FormHelperText>Loan Minimum Amount</FormHelperText>
           </FormControl>
         </FormLabel>
       )}
@@ -181,15 +170,11 @@ export default function MinMaxQuestion({
               className="in-down"
               options={currentQuestion?.downPaymentOptions}
               getOptionLabel={(option) => option?.title}
-              value={
-                checkBox?.[questionNumber]?.minDownPayment
-              }
+              value={checkBox?.[questionNumber]?.minDownPayment}
               onChange={(event, newValue) => {
                 setMinDownValue(newValue?.title);
               }}
-              inputValue={
-                checkBox?.[questionNumber]?.minDownPayment
-              }
+              inputValue={checkBox?.[questionNumber]?.minDownPayment}
               onInputChange={(event, newInputValue) => {
                 setInputMinDownValue(newInputValue);
               }}
