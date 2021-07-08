@@ -18,10 +18,12 @@ import LoginScreen from './Screens/LoginScreen'
 import SignUp from './Screens/SignUpScreen/SignUp';
 import Footer from './Components/Footer/Footer';
 import BlogDetail from './Components/BlogDetail/BlogDetail';
+import { TouchBackend } from 'react-dnd-touch-backend';
+import ResultScreen from './Screens/ResultScreen';
 
 function App() {
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={TouchBackend} options={{ enableMouseEvents: true }}>
       <Router basename="/guessyourcar">
         <div className="App">
           <PrimarySearchAppBar />
@@ -35,6 +37,8 @@ function App() {
             <Route exact path="/login" component={LoginScreen} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/detail" component={BlogDetail} />
+            <Route exact path="/result" component={ResultScreen} />
+
           </Switch>
           <Divider />
           <Grid container className="mt-3">
@@ -42,7 +46,7 @@ function App() {
           </Grid>
         </div>
       </Router>
-    </DndProvider>
+    </DndProvider >
   );
 }
 

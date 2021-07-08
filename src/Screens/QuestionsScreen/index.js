@@ -8,6 +8,7 @@ import { allQuestions } from './Questions';
 import MinMaxQuestion from '../../Components/Question/MinMax';
 import GetInformationQuestion from '../../Components/Question/GetInformation';
 import axios from 'axios'
+import { useHistory } from 'react-router-dom';
 
 
 export default function Index() {
@@ -136,14 +137,17 @@ export default function Index() {
             engineCapacity: "ONE"
         }
     }
+    const history = useHistory();
+
 
 
     const handleSubmit = () => {
-        const response = axios.post('http://184.168.126.65:8080/gyc/questionnaire/result', req);
-        console.log({ response });
-        if (response) {
-            alert({ response });
-        }
+        // const response = axios.post('http://184.168.126.65:8080/gyc/questionnaire/result', req);
+        // console.log({ response });
+        // if (response) {
+        //     alert({ response });
+        // }
+        history.push("/result");
     }
     return (
         <Grid container style={{ marginTop: 80 }} >

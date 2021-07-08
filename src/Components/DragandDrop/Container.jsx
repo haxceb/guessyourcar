@@ -45,7 +45,6 @@ export const Container = ({
           id={card.id}
           text={card.text}
           moveCard={moveCard}
-          className="in-left"
         />
       );
     };

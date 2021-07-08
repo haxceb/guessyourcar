@@ -91,9 +91,9 @@ export default function MinMaxQuestion({
             <Autocomplete
               id="combo-box-demo"
               options={currentQuestion?.minimumOptions}
-              className="in-down"
               getOptionLabel={(option) => option.title}
               style={{ width: 120 }}
+              freeSolo
               value={checkBox?.[questionNumber]?.minCashBudget}
               onChange={(event, newValue) => {
                 setMinValue(newValue?.title);
@@ -117,6 +117,7 @@ export default function MinMaxQuestion({
               getOptionLabel={(option) => option.title}
               className="in-down"
               style={{ width: 120 }}
+              freeSolo
               value={checkBox?.[questionNumber]?.maxCashBudget}
               onChange={(event, newValue) => {
                 console.log({ newValue });
@@ -144,6 +145,7 @@ export default function MinMaxQuestion({
               className="in-down"
               options={currentQuestion?.loanYears}
               getOptionLabel={(option) => option.title}
+              // freeSolo
               style={{ width: 150 }}
               value={checkBox?.[questionNumber]?.minLoanValue}
               onChange={(event, newValue) => {
@@ -168,6 +170,7 @@ export default function MinMaxQuestion({
             <Autocomplete
               id="combo-box-demo"
               className="in-down"
+              freeSolo
               options={currentQuestion?.downPaymentOptions}
               getOptionLabel={(option) => option?.title}
               value={checkBox?.[questionNumber]?.minDownPayment}

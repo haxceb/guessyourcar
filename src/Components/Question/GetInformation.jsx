@@ -36,7 +36,7 @@ export default function GetInformationQuestion({
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <Grid item container className="w-50" justify="flex-start">
+      <Grid item container spacing={1} className="w-50" justify="flex-start">
         <Grid item xs={6}>
           <TextField
             onChange={onChange}
