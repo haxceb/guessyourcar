@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/guessyourcar/static/css/main.fcf55806.chunk.css",
-    "main.js": "/guessyourcar/static/js/main.5ea0f492.chunk.js",
-    "main.js.map": "/guessyourcar/static/js/main.5ea0f492.chunk.js.map",
+    "main.js": "/guessyourcar/static/js/main.044aecf5.chunk.js",
+    "main.js.map": "/guessyourcar/static/js/main.044aecf5.chunk.js.map",
     "runtime-main.js": "/guessyourcar/static/js/runtime-main.2af619b5.js",
     "runtime-main.js.map": "/guessyourcar/static/js/runtime-main.2af619b5.js.map",
     "static/css/2.63b73c68.chunk.css": "/guessyourcar/static/css/2.63b73c68.chunk.css",
-    "static/js/2.2872dc4d.chunk.js": "/guessyourcar/static/js/2.2872dc4d.chunk.js",
-    "static/js/2.2872dc4d.chunk.js.map": "/guessyourcar/static/js/2.2872dc4d.chunk.js.map",
+    "static/js/2.96e507c2.chunk.js": "/guessyourcar/static/js/2.96e507c2.chunk.js",
+    "static/js/2.96e507c2.chunk.js.map": "/guessyourcar/static/js/2.96e507c2.chunk.js.map",
     "static/js/3.9020bb8b.chunk.js": "/guessyourcar/static/js/3.9020bb8b.chunk.js",
     "static/js/3.9020bb8b.chunk.js.map": "/guessyourcar/static/js/3.9020bb8b.chunk.js.map",
     "index.html": "/guessyourcar/index.html",
     "static/css/2.63b73c68.chunk.css.map": "/guessyourcar/static/css/2.63b73c68.chunk.css.map",
     "static/css/main.fcf55806.chunk.css.map": "/guessyourcar/static/css/main.fcf55806.chunk.css.map",
-    "static/js/2.2872dc4d.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.2872dc4d.chunk.js.LICENSE.txt",
+    "static/js/2.96e507c2.chunk.js.LICENSE.txt": "/guessyourcar/static/js/2.96e507c2.chunk.js.LICENSE.txt",
     "static/media/1.87b7bd30.webp": "/guessyourcar/static/media/1.87b7bd30.webp",
     "static/media/2.bffe1d87.webp": "/guessyourcar/static/media/2.bffe1d87.webp",
     "static/media/2021-mercedes-benz-s-class.7150b5ed.jpg": "/guessyourcar/static/media/2021-mercedes-benz-s-class.7150b5ed.jpg",
@@ -24,6 +24,9 @@
     "static/media/FORD FREESTYLE.44b18a1c.png": "/guessyourcar/static/media/FORD FREESTYLE.44b18a1c.png",
     "static/media/HONDA CITY.057b4913.png": "/guessyourcar/static/media/HONDA CITY.057b4913.png",
     "static/media/Hatchbackicon1.6101ddb0.svg": "/guessyourcar/static/media/Hatchbackicon1.6101ddb0.svg",
+    "static/media/MERCEDES C-CLASS.20d86f92.png": "/guessyourcar/static/media/MERCEDES C-CLASS.20d86f92.png",
+    "static/media/MG MG ZS.8d056603.png": "/guessyourcar/static/media/MG MG ZS.8d056603.png",
+    "static/media/MINI MINI.a8c8bf05.png": "/guessyourcar/static/media/MINI MINI.a8c8bf05.png",
     "static/media/MPV_icon1.2e96c053.svg": "/guessyourcar/static/media/MPV_icon1.2e96c053.svg",
     "static/media/SUVIcon1.bb5a8ce9.svg": "/guessyourcar/static/media/SUVIcon1.bb5a8ce9.svg",
     "static/media/SedanIcon1.e1d35cb8.svg": "/guessyourcar/static/media/SedanIcon1.e1d35cb8.svg",
@@ -34,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.2af619b5.js",
     "static/css/2.63b73c68.chunk.css",
-    "static/js/2.2872dc4d.chunk.js",
+    "static/js/2.96e507c2.chunk.js",
     "static/css/main.fcf55806.chunk.css",
-    "static/js/main.5ea0f492.chunk.js"
+    "static/js/main.044aecf5.chunk.js"
   ]
 }
